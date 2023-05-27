@@ -1,0 +1,307 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  align-self: auto;
+}
+
+nav {
+  margin: 4em;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 4.1em;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+nav ul li a.active::before {
+  position: absolute;
+  content: "";
+  width: 35%;
+  height: 1px;
+  bottom: -6px;
+  border-bottom: 2px solid #000;
+}
+
+nav ul li a::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 1px;
+  bottom: -6px;
+  border-bottom: 2px solid #7a7a7a;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover:before {
+  width: 35%;
+}
+
+/* Hero Section */
+
+main {
+  display: flex;
+  gap: 8em;
+  margin-top: 11em;
+}
+
+.left-col {
+  width: 45%;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  font-size: 5.2rem;
+  margin: 0;
+}
+
+.subhead {
+  font-size: 1.8rem;
+}
+
+/* Call to Action */
+
+.cta-btns {
+  margin: 5em 0;
+}
+
+.cta-btns,
+.secondary-cta {
+  display: flex;
+  gap: 2em;
+}
+
+.primary-cta {
+  background-color: #f2f0df;
+  color: #000;
+  text-decoration: none;
+  padding: 1em 2em;
+  border-radius: 1.9em;
+  font-size: 1.8rem;
+  font-weight: bold;
+  transition: all .5s;
+}
+
+.primary-cta:hover {
+  background-color: #e2d1bd;
+}
+
+.secondary-cta {
+  font-size: 1.8rem;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  padding: 1em 0;
+}
+
+.secondary-cta:hover {
+  text-decoration: underline;
+}
+
+.secondary-cta svg {
+  transition: all 0.3s;
+}
+
+.secondary-cta:hover svg {
+  transform: translateX(10px);
+}
+
+/* News */
+
+.news {
+  position: relative;
+  padding: 5em;
+  display: flex;
+  gap: 3em;
+  border: 1px solid #000;
+  border-radius: 0.8em;
+  box-shadow: 15px 9px 30px rgba(160, 160, 160, 0.25);
+}
+
+.news::before {
+  position: absolute;
+  content: "";
+  background: url("../images/confetti.svg");
+  width: 100px;
+  height: 100px;
+  top: -20px;
+  left: -20px;
+  z-index: 2;
+}
+
+p.employees {
+  font-size: 3.3rem;
+  margin: 0;
+  font-weight: 200;
+  line-height: 100%;
+}
+
+p.details {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* Right column gallery */
+
+.right-col {
+  flex-grow: 1;
+  display: grid;
+  gap: 2.3em;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+    "left ."
+    "left .";
+}
+
+.card {
+  align-items: end;
+  border-radius: 0.8em;
+  padding: 1.1em;
+  display: flex;
+}
+
+.card:hover .card-details {
+  transform: translateY(-20px);
+}
+
+.card1 {
+  background: url("../images/black-sesame.jpg");
+  grid-area: left;
+  position: relative;
+  background-size: 150%;
+  transition: all 0.8s;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card1::before {
+  position: absolute;
+  content: "";
+  background: url("../images/tag.svg") no-repeat;
+  width: 100%;
+  height: 100%;
+  left: -30px;
+  top: 20;
+  pointer-events: none;
+}
+
+.card1:hover {
+  background-size: 160%;
+}
+
+.card2 {
+  background: url("../images/mohammad-amiri-r8xBMvjF_Zk-unsplash.jpg");
+  background-size: 150%;
+  transition: all 0.8s;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card2:hover {
+  background-size: 160%;
+}
+
+.card3 {
+  background: url("../images/close-up-pumpkin-seeds.jpg");
+  background-size: 150%;
+  transition: all 0.8s;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card3:hover {
+  background-size: 160%;
+}
+
+.card-details {
+  border-radius: 0.6em;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+  width: 100%;
+  transition: transform 800ms;
+}
+
+.product-title {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+.card-details p {
+  color: #505050;
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.product-price {
+  font-size: 1.8rem;
+}
+
+/* Intro Animation */
+
+.overlay {
+  position: absolute;
+  z-index: 999;
+  background: white;
+  width: 100%;
+  height: 100%;
+  animation: reveal 1s ease-in forwards;
+  transform-origin: bottom;
+}
+
+@keyframes reveal {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+main {
+  animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  transform: scale(0.4);
+}
+
+@keyframes growIn {
+  to {
+    transform: scale(1);
+  }
+}
